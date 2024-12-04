@@ -23,7 +23,7 @@ export default apiInitializer("0.11.1", (api) => {
   I18n.translations[currentLocale].js.superscript_button_title = settings.superscript_button;
   I18n.translations[currentLocale].js.subscript_button_title = settings.subscript_button;
   I18n.translations[currentLocale].js.columns_button_title = settings.columns_button;
-  I18n.translations[currentLocale].js.float_left_button_title = settings.float_left_button;
+  I18n.translations[currentLocale].js.align_left_button_title = settings.align_left_button;
   I18n.translations[currentLocale].js.composer.this = "this";
 
 
