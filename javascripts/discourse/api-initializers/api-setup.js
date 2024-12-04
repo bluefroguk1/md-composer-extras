@@ -15,16 +15,20 @@ export default apiInitializer("0.11.1", (api) => {
 
   // Localization setup
   I18n.translations[currentLocale].js.highlight_button_title = settings.highlighter_button;
-  I18n.translations[currentLocale].composer.underline_button = settings.underline_button;
+  I18n.translations[currentLocale].js.underline_button = settings.underline_button;
   I18n.translations[currentLocale].js.align_center_button_title = settings.align_center_button;
   I18n.translations[currentLocale].js.align_right_button_title = settings.align_right_button;
   I18n.translations[currentLocale].js.align_justify_button_title = settings.align_justify_button;
-  I18n.translations[currentLocale].composer.strikethrough_button = settings.strikethrough_button;
+  I18n.translations[currentLocale].js.strikethrough_button = settings.strikethrough_button;
   I18n.translations[currentLocale].js.superscript_button_title = settings.superscript_button;
   I18n.translations[currentLocale].js.subscript_button_title = settings.subscript_button;
   I18n.translations[currentLocale].js.columns_button = settings.columns_button;
   I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
   I18n.translations[currentLocale].js.composer.this = "this";
+
+
+
+
 
   // Highlight Button
   api.modifyClass("controller:composer", {
@@ -53,42 +57,50 @@ export default apiInitializer("0.11.1", (api) => {
         id: "underline_button",
         group: "fontStyles",
         icon: "underline",
+        shortcut: "U",
+        title: "underline_button_title",
         perform: (e) => e.applySurround("[u]", "[/u]", "underline_text"),
       },
       {
         id: "strikethrough_button",
         group: "fontStyles",
         icon: "strikethrough",
+        title: "strikethrough_button_title",
         perform: (e) => e.applySurround("<s>", "</s>", "strikethrough_text"),
       },
       {
         id: "superscript_button",
         group: "fontStyles",
         icon: "superscript",
+        title: "superscript_button_title",
         perform: (e) => e.applySurround("<sup>", "</sup>", "superscript_text"),
       },
       {
         id: "subscript_button",
         group: "fontStyles",
         icon: "subscript",
+        title: "subscript_button_title",
         perform: (e) => e.applySurround("<sub>", "</sub>", "subscript_text"),
       },
       {
         id: "align_center_button",
         group: "extras",
         icon: "align-center",
+        title: "align-center_button_title",
         perform: (e) => e.applySurround('[wrap="center"]\n', "\n[/wrap]", "align_center_text"),
       },
       {
         id: "align_right_button",
         group: "extras",
         icon: "align-right",
+        title: "align-right_button_title",
         perform: (e) => e.applySurround('[wrap="right"]\n', "\n[/wrap]", "align_right_text"),
       },
       {
         id: "align_justify_button",
         group: "extras",
         icon: "align-justify",
+        title: "align-justify_button_title",
         perform: (e) => e.applySurround('[wrap="justify"]\n', "\n[/wrap]", "align_justify_text"),
       },
     ];
