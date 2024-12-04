@@ -14,7 +14,16 @@ export default apiInitializer("0.11.1", (api) => {
   const currentLocale = I18n.currentLocale();
 
   // Localization setup
-  I18n.translations[currentLocale].js.highlight_button_title = "Highlight Text";
+  I18n.translations[currentLocale].js.highlight_button_title = settings.highlighter_button;
+  I18n.translations[currentLocale].js.underline_button_title = settings.underline_button;
+  I18n.translations[currentLocale].js.align_center_button_title = settings.align_center_button;
+  I18n.translations[currentLocale].js.align_right_button_title = settings.align_right_button;
+  I18n.translations[currentLocale].js.align_justify_button_title = settings.align_justify_button;
+  I18n.translations[currentLocale].js.strikethrough_button_title = settings.strikethrough_button;
+  I18n.translations[currentLocale].js.superscript_button_title = settings.superscript_button;
+  I18n.translations[currentLocale].js.subscript_button_title = settings.subscript_button;
+  I18n.translations[currentLocale].js.columns_button = settings.columns_button;
+  I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
   I18n.translations[currentLocale].js.composer.this = "this";
 
   // Highlight Button
