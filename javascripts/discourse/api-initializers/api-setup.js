@@ -30,14 +30,14 @@ export default apiInitializer("0.11.1", (api) => {
   I18n.translations[currentLocale].js.columns_button_title = settings.columns_button;
   I18n.translations[currentLocale].js.align_left_button_title = settings.align_left_button;
   I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
+  I18n.translations[currentLocale].js.highlighter_text = settings.highlighter_text;
 
   // Modify the highlighter action
   api.modifyClass("controller:composer", {
     pluginId: "highlight",
     actions: {
       highlightButton() {
-        const text = settings.highlighter_text;
-        toolbarEvent.applySurround("<mark>", "</mark>", text, { multiline: false });
+        toolbarEvent.applySurround("<mark>", "</mark>", settings.highlighter_text);
       },
     },
   });
@@ -45,16 +45,6 @@ export default apiInitializer("0.11.1", (api) => {
   // Toolbar Button Definitions
   api.onToolbarCreate((toolbar) => {
     const buttons = [
-      {
-        id: "composer_highlight_button",
-        group: "extras",
-        icon: "highlighter",
-        shortcut: "H",
-        preventFocus: true,
-        trimLeading: true,
-        title: "highlight_button_title",
-        perform: (e) => e.applySurround("<mark>", "</mark>", getRawText(settings.highlighter_text)),
-      },
       {
         id: "underline_button",
         group: "fontStyles",
@@ -120,7 +110,7 @@ export default apiInitializer("0.11.1", (api) => {
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
       const text = settings.highlighter_text;
-      toolbarEvent.applySurround("<mark>", "</mark>", text, { multiline: false });
+      toolbarEvent.applySurround("<mark>", "</mark>", settings.highlighter_text);
     },
     icon: "highlighter",
     label: "highlighter_button_title",
