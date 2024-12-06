@@ -10,6 +10,10 @@ highlighter_button:
   default: "Highlighter"
   description:
     en: Enter the text for the title of the button in the composer.
+highlighter_text:
+  default: "Text123"
+  description:
+    en: Enter the placeholder text that appears in the composer after the user clicks the button.
 align_center_button:
   default: "Center"
   description:
