@@ -15,17 +15,27 @@ export default apiInitializer("0.11.1", (api) => {
 
   // Localization setup
   I18n.translations[currentLocale].js.highlight_button_title = settings.highlighter_button;
+  I18n.translations[currentLocale].js.highlighter_text = settings.highlighter_text;
   I18n.translations[currentLocale].js.underline_button_title = settings.underline_button;
+  I18n.translations[currentLocale].js.underline_text = settings.underline_text;
   I18n.translations[currentLocale].js.align_center_button_title = settings.align_center_button;
+  I18n.translations[currentLocale].js.align_center_text = settings.align_center_text;
   I18n.translations[currentLocale].js.align_right_button_title = settings.align_right_button;
+  I18n.translations[currentLocale].js.align_right_text = settings.align_right_text;
   I18n.translations[currentLocale].js.align_justify_button_title = settings.align_justify_button;
+  I18n.translations[currentLocale].js.align_justify_text = settings.align_justify_text;
   I18n.translations[currentLocale].js.strikethrough_button_title = settings.strikethrough_button;
+  I18n.translations[currentLocale].js.strikethrough_text = settings.strikethrough_text;
   I18n.translations[currentLocale].js.superscript_button_title = settings.superscript_button;
+  I18n.translations[currentLocale].js.superscript_text = settings.superscript_text;
   I18n.translations[currentLocale].js.subscript_button_title = settings.subscript_button;
-  I18n.translations[currentLocale].js.columns_button_title = settings.columns_button; 
+  I18n.translations[currentLocale].js.subscript_text = settings.subscript_text;
+  I18n.translations[currentLocale].js.columns_button_title = settings.columns_button;
+  I18n.translations[currentLocale].js.columns_text = settings.columns_text;
   I18n.translations[currentLocale].js.align_left_button_title = settings.align_left_button;
+  I18n.translations[currentLocale].js.align_left_text = settings.align_left_text;
   I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
-  I18n.translations[currentLocale].js.composer.this = "this";
+  I18n.translations[currentLocale].js.float_left_text = settings.float_left_text;
 
   // Highlight Button
   api.modifyClass("controller:composer", {
@@ -48,7 +58,7 @@ export default apiInitializer("0.11.1", (api) => {
         preventFocus: true,
         trimLeading: true,
         title: "highlight_button_title",
-        perform: (e) => e.applySurround("<mark>", "</mark>", "this"),
+        perform: (e) => e.applySurround("<mark>", "</mark>", "highlighter_text"),
       },
       {
         id: "underline_button",
@@ -111,6 +121,16 @@ export default apiInitializer("0.11.1", (api) => {
 
     buttons.forEach((button) => toolbar.addButton(button));
   });
+
+  api.addComposerToolbarPopupMenuOption({
+    action: (toolbarEvent) => {
+      toolbarEvent.applySurround("<mark>", "</mark>", "highlighter_text");
+    },
+    icon: "highlighter",
+    label: "highlighter_button_title",
+    shortcut: "H",
+  });
+
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) =>
