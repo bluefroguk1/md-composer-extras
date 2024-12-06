@@ -74,6 +74,6 @@ columns_text:
 Svg_icons: 
   type: 'list'
   list_type: 'compact'
-  default: 'fa-align-center|fa-align-right|fa-align-justify|fa-strikethrough|fa-underline|fa-indent|fa-columns|fa-superscript|fa-subscript'
+  default: 'align-center|align-right|align-justify|strikethrough|underline|indent|table-columns|superscript|subscript'
   description: 
-    en: "Include FontAwesome 5 icon classes for each icon used in the list."
+    en: "Include FontAwesome 6 icon classes for each icon used in the list."
