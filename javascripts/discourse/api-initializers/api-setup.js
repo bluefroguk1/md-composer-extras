@@ -30,16 +30,15 @@ export default apiInitializer("0.11.1", (api) => {
   I18n.translations[currentLocale].js.columns_button_title = settings.columns_button;
   I18n.translations[currentLocale].js.align_left_button_title = settings.align_left_button;
   I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
+  I18n.translations[currentLocale].js.highlight_button_title = "Highlight Text";
+  I18n.translations[currentLocale].js.composer.this = settings.highlighter_text;
 
   // Modify the highlighter action
   api.modifyClass("controller:composer", {
     pluginId: "highlight",
     actions: {
       highlightButton() {
-        const text = "Text123";
-        console.log("Highlighter text:", text);
-        console.log("Settings text:", settings.highlighter_text);
-        this.get("toolbarEvent").applySurround("<mark>", "</mark>", text);
+        this.get("toolbarEvent").applySurround("<mark>", "</mark>", this);
       },
     },
   });
@@ -121,13 +120,10 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      const text = "Text123";
-      console.log("Popup menu text:", text);
-      console.log("Settings popup text:", settings.highlighter_text);
-      toolbarEvent.applySurround("<mark>", "</mark>", text);
+      toolbarEvent.applySurround("<mark>", "</mark>", settings.highlighter_text);
     },
     icon: "highlighter",
-    label: "highlighter_button_title",
+    label: "highlight_button_title",
     shortcut: "H",
   });
 
