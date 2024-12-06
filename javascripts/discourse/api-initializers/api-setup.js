@@ -84,7 +84,7 @@ export default apiInitializer("0.11.1", (api) => {
         group: "extras",
         icon: "align-left",
         title: "align_left_button_title",
-        perform: (e) => e.applySurround('[wrap="floatl"]\n', "\n[/wrap]", "align_left_text"),
+        perform: (e) => e.applySurround('[wrap="left"]\n', "\n[/wrap]", "align_left_text"),
       },
       {
         id: "align_center_button",
