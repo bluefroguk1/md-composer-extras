@@ -37,7 +37,7 @@ export default apiInitializer("0.11.1", (api) => {
     pluginId: "highlight",
     actions: {
       highlightButton() {
-        toolbarEvent.applySurround("<mark>", "</mark>", settings.highlighter_text);
+        toolbarEvent.applySurround("<mark>", "</mark>", I18n.t("composer.highlighter_text"));
       },
     },
   });
@@ -109,11 +109,11 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      const text = settings.highlighter_text;
-      toolbarEvent.applySurround("<mark>", "</mark>", settings.highlighter_text);
+      const text = I18n.t("composer.highlighter_text"); // Use translation
+      toolbarEvent.applySurround("<mark>", "</mark>", text);
     },
     icon: "highlighter",
-    label: "highlighter_button_title",
+    label: "composer.highlight_button_title",
     shortcut: "H",
   });
 
