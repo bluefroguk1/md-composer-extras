@@ -20,8 +20,8 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      const text = settings.highlighter_text || "Text123";
-      toolbarEvent.applySurround("<mark>", "</mark>", text);
+      const text = settings.highlighter_text?.trim() || "Text123";
+      toolbarEvent.applySurround("<mark>", "</mark>", text, { multiline: false });
     },
     icon: "highlighter",
     label: "composer.highlight_button_title",
