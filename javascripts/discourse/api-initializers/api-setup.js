@@ -31,12 +31,13 @@ export default apiInitializer("0.11.1", (api) => {
   I18n.translations[currentLocale].js.align_left_button_title = settings.align_left_button;
   I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
 
-  // Highlight Button
+  // Modify the highlighter action
   api.modifyClass("controller:composer", {
     pluginId: "highlight",
     actions: {
       highlightButton() {
-        this.get("toolbarEvent").applySurround("<mark>", "</mark>", getRawText(settings.highlighter_text));
+        const text = "Text123"; // Hard-coded for testing
+        this.get("toolbarEvent").applySurround("<mark>", "</mark>", text);
       },
     },
   });
@@ -118,10 +119,11 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      toolbarEvent.applySurround("<mark>", "</mark>", getRawText(settings.highlighter_text));
+      const text = "Text123"; // Hard-coded for testing
+      toolbarEvent.applySurround("<mark>", "</mark>", text);
     },
     icon: "highlighter",
-    label: "highlight_button_title",
+    label: "highlighter_button_title",
     shortcut: "H",
   });
 
