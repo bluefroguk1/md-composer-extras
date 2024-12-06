@@ -109,13 +109,14 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      const text = I18n.t("composer.highlighter_text"); // Use translation
+      const text = I18n.t("composer.highlighter_text") || settings.highlighter_text; // Fallback to settings if localization fails
       toolbarEvent.applySurround("<mark>", "</mark>", text);
     },
     icon: "highlighter",
     label: "composer.highlight_button_title",
     shortcut: "H",
   });
+  
 
 
   api.addComposerToolbarPopupMenuOption({
