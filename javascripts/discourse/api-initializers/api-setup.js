@@ -31,7 +31,7 @@ export default apiInitializer("0.11.1", (api) => {
     pluginId: "highlight",
     actions: {
       highlightButton() {
-        this.get("toolbarEvent").applySurround("<mark>", "</mark>", settings.highlighter_text);
+        this.get("toolbarEvent").applySurround("<mark>", "</mark>", `${settings.highlighter_text}`);
       },
     },
   });
@@ -47,7 +47,7 @@ export default apiInitializer("0.11.1", (api) => {
         preventFocus: true,
         trimLeading: true,
         title: "highlight_button_title",
-        perform: (e) => e.applySurround("<mark>", "</mark>", settings.highlighter_text),
+        perform: (e) => e.applySurround("<mark>", "</mark>", `${settings.highlighter_text}`),
       },
       {
         id: "underline_button",
@@ -113,7 +113,7 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      toolbarEvent.applySurround("<mark>", "</mark>", settings.highlighter_text);
+      toolbarEvent.applySurround("<mark>", "</mark>", `${settings.highlighter_text}`);
     },
     icon: "highlighter",
     label: "highlighter_button_title",
