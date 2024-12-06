@@ -1,7 +1,7 @@
 en:
   composer:
     highlight_button_title: settings.highlighter_button
-    highlighter_text: settings.highlighter_text
+    highlighter_text: "Text321"
     underline_button_title: settings.underline_button
     underline_button_text: settings.underline_text
     align_center_button_title: settings.align_center_button

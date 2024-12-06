@@ -107,6 +107,8 @@ export default apiInitializer("0.11.1", (api) => {
     buttons.forEach((button) => toolbar.addButton(button));
   });
 
+  console.log("Resolved Highlighter Text:", I18n.t("composer.highlighter_text"));
+
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
       const text = I18n.t("composer.highlighter_text") || settings.highlighter_text; // Fallback to settings if localization fails
