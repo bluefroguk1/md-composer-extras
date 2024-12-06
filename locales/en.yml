@@ -1,8 +1,13 @@
 en:
-  composer:
-    highlight_button_title: "Highlight"
-    highlighter_text: "Highlight text"
-    underline_button_title: "Underline"
-    underline_text: "Underline text"
-    float_left_button: "Float Left"
-    float_left_text: "Text to float left"
+  js:
+    highlight_button_title: settings.highlighter_button
+    underline_button_title: settings.underline_button
+    align_center_button_title: settings.align_center_button
+    align_right_button_title: settings.align_right_button
+    align_justify_button_title: settings.align_justify_button
+    strikethrough_button_title: settings.strikethrough_button
+    superscript_button_title: settings.superscript_button
+    subscript_button_title: settings.subscript_button
+    columns_button_title: settings.columns_button
+    align_left_button_title: settings.align_left_button
+    float_left_button: settings.float_left_button
