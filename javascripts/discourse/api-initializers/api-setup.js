@@ -51,16 +51,6 @@ export default apiInitializer("0.11.1", (api) => {
   api.onToolbarCreate((toolbar) => {
     const buttons = [
       {
-        id: "composer_highlight_button",
-        group: "extras",
-        icon: "highlighter",
-        shortcut: "H",
-        preventFocus: true,
-        trimLeading: true,
-        title: "highlight_button_title",
-        perform: (e) => e.applySurround("<mark>", "</mark>", "highlighter_text"),
-      },
-      {
         id: "underline_button",
         group: "fontStyles",
         icon: "underline",
