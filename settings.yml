@@ -6,6 +6,10 @@ underline_text:
   default: "Text"
   description:
     en: Enter the placeholder text that appears in the composer after the user clicks the button.
+highlighter_button:
+  default: "Highlighter"
+  description:
+    en: Enter the text for the title of the button in the composer.
 align_center_button:
   default: "Center"
   description:
@@ -72,10 +76,6 @@ subscript_text:
     en: Enter the placeholder text that appears in the composer after the user clicks the button.
 columns_button:
   default: "Columns"
-  description:
-    en: Enter the text for the title of the button in the composer.
-highlighter_button:
-  default: "Highlighter"
   description:
     en: Enter the text for the title of the button in the composer.
 columns_text:

@@ -24,11 +24,8 @@ export default apiInitializer("0.11.1", (api) => {
   I18n.translations[currentLocale].js.subscript_button_title = settings.subscript_button;
   I18n.translations[currentLocale].js.columns_button_title = settings.columns_button; 
   I18n.translations[currentLocale].js.align_left_button_title = settings.align_left_button;
+  I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
   I18n.translations[currentLocale].js.composer.this = "this";
-
-
-
-
 
   // Highlight Button
   api.modifyClass("controller:composer", {
@@ -120,6 +117,14 @@ export default apiInitializer("0.11.1", (api) => {
       toolbarEvent.applySurround('[wrap="columns"]\n', "\n[/wrap]", "columns_text"),
     icon: "table-columns",
     label: "columns_button_title",
+  });
+
+  api.addComposerToolbarPopupMenuOption({
+    action: (toolbarEvent) => {
+      toolbarEvent.applySurround('[wrap="floatl"]\n', '\n[/wrap]', "float_left_text");
+    },
+    icon: 'indent',
+    label: 'float_left_button',
   });
 
   // Decorate cooked elements with highlight processing
