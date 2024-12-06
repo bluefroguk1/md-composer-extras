@@ -119,7 +119,7 @@ export default apiInitializer("0.11.1", (api) => {
     action: (toolbarEvent) =>
       toolbarEvent.applySurround('[wrap="columns"]\n', "\n[/wrap]", "columns_text"),
     icon: "table-columns",
-    label: "columns_button",
+    label: "columns_button_title",
   });
 
   // Decorate cooked elements with highlight processing
