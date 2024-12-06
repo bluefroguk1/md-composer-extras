@@ -113,10 +113,10 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      toolbarEvent.applySurround("<mark>", "</mark>", `${settings.highlighter_text}`);
+      toolbarEvent.applySurround("<mark>", "</mark>", settings.highlighter_text);
     },
     icon: "highlighter",
-    label: "highlighter_button_title",
+    label: "highlight_button_title",
     shortcut: "H",
   });
 
