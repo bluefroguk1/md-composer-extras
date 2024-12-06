@@ -51,61 +51,71 @@ export default apiInitializer("0.11.1", (api) => {
   api.onToolbarCreate((toolbar) => {
     const buttons = [
       {
+        id: "composer_highlight_button",
+        group: "extras",
+        icon: "highlighter",
+        shortcut: "H",
+        preventFocus: true,
+        trimLeading: true,
+        title: "highlight_button_title",
+        perform: (e) => e.applySurround("<mark>", "</mark>", I18n.t("highlighter_text")),
+      },
+      {
         id: "underline_button",
         group: "fontStyles",
         icon: "underline",
         shortcut: "U",
         title: "underline_button_title",
-        perform: (e) => e.applySurround("[u]", "[/u]", "underline_text"),
+        perform: (e) => e.applySurround("[u]", "[/u]", I18n.t("underline_text")),
       },
       {
         id: "strikethrough_button",
         group: "fontStyles",
         icon: "strikethrough",
         title: "strikethrough_button_title",
-        perform: (e) => e.applySurround("<s>", "</s>", "strikethrough_text"),
+        perform: (e) => e.applySurround("<s>", "</s>", I18n.t("strikethrough_text")),
       },
       {
         id: "superscript_button",
         group: "fontStyles",
         icon: "superscript",
         title: "superscript_button_title",
-        perform: (e) => e.applySurround("<sup>", "</sup>", "superscript_text"),
+        perform: (e) => e.applySurround("<sup>", "</sup>", I18n.t("superscript_text")),
       },
       {
         id: "subscript_button",
         group: "fontStyles",
         icon: "subscript",
         title: "subscript_button_title",
-        perform: (e) => e.applySurround("<sub>", "</sub>", "subscript_text"),
+        perform: (e) => e.applySurround("<sub>", "</sub>", I18n.t("subscript_text")),
       },
       {
         id: "align_left_button",
         group: "extras",
         icon: "align-left",
         title: "align_left_button_title",
-        perform: (e) => e.applySurround('[wrap="left"]\n', "\n[/wrap]", "align_left_text"),
+        perform: (e) => e.applySurround('[wrap="floatl"]\n', "\n[/wrap]", I18n.t("align_left_text")),
       },
       {
         id: "align_center_button",
         group: "extras",
         icon: "align-center",
         title: "align_center_button_title",
-        perform: (e) => e.applySurround('[wrap="center"]\n', "\n[/wrap]", "align_center_text"),
+        perform: (e) => e.applySurround('[wrap="center"]\n', "\n[/wrap]", I18n.t("align_center_text")),
       },
       {
         id: "align_right_button",
         group: "extras",
         icon: "align-right",
         title: "align_right_button_title",
-        perform: (e) => e.applySurround('[wrap="right"]\n', "\n[/wrap]", "align_right_text"),
+        perform: (e) => e.applySurround('[wrap="right"]\n', "\n[/wrap]", I18n.t("align_right_text")),
       },
       {
         id: "align_justify_button",
         group: "extras",
         icon: "align-justify",
         title: "align_justify_button_title",
-        perform: (e) => e.applySurround('[wrap="justify"]\n', "\n[/wrap]", "align_justify_text"),
+        perform: (e) => e.applySurround('[wrap="justify"]\n', "\n[/wrap]", I18n.t("align_justify_text")),
       },
     ];
 
@@ -124,14 +134,14 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) =>
-      toolbarEvent.applySurround('[wrap="columns"]\n', "\n[/wrap]", "columns_text"),
+      toolbarEvent.applySurround('[wrap="columns"]\n', "\n[/wrap]", I18n.t("columns_text")),
     icon: "table-columns",
     label: "columns_button_title",
   });
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      toolbarEvent.applySurround('[wrap="floatl"]\n', '\n[/wrap]', "float_left_text");
+      toolbarEvent.applySurround('[wrap="floatl"]\n', '\n[/wrap]', I18n.t("float_left_text"));
     },
     icon: 'indent',
     label: 'float_left_button',
