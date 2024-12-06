@@ -13,7 +13,7 @@ highlighter_button:
 highlighter_text:
   default: "Text123"
   description:
-    en: Enter the placeholder text that appears in the composer after the user clicks the button.
+    en: "Enter the placeholder text that appears in the composer after clicking the highlighter button"
 align_center_button:
   default: "Center"
   description:
