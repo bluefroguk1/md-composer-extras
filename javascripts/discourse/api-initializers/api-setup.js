@@ -36,7 +36,9 @@ export default apiInitializer("0.11.1", (api) => {
     pluginId: "highlight",
     actions: {
       highlightButton() {
-        const text = "Text123"; // Hard-coded for testing
+        const text = "Text123";
+        console.log("Highlighter text:", text);
+        console.log("Settings text:", settings.highlighter_text);
         this.get("toolbarEvent").applySurround("<mark>", "</mark>", text);
       },
     },
@@ -119,7 +121,9 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      const text = "Text123"; // Hard-coded for testing
+      const text = "Text123";
+      console.log("Popup menu text:", text);
+      console.log("Settings popup text:", settings.highlighter_text);
       toolbarEvent.applySurround("<mark>", "</mark>", text);
     },
     icon: "highlighter",
