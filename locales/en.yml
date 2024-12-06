@@ -9,7 +9,7 @@ en:
     align_right_button_title: settings.align_right_button
     align_justify_button_title: settings.align_justify_button
     align_left_button_title: settings.align_left_button
-    columns_button: settings.columns_button
+    columns_button_title: settings.columns_button
 
 
 

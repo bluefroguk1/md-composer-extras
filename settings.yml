@@ -14,6 +14,14 @@ align_center_text:
   default: "Text"
   description:
     en: Enter the placeholder text that appears in the composer after the user clicks the button.
+align_left_button:
+  default: "Align left"
+  description:
+    en: Enter the text for the title of the button in the composer.
+align_left_text:
+  default: "Text"
+  description:
+    en: Enter the placeholder text that appears in the composer after the user clicks the button.
 align_right_button:
   default: "Align right"
   description:
