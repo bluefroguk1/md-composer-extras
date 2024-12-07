@@ -19,7 +19,6 @@ export default apiInitializer("0.11.1", (api) => {
   const currentLocale = I18n.currentLocale();
 
   // Localization setup - keep only the button titles in translations
-  I18n.translations[currentLocale].js.highlight_button_title = settings.highlighter_button;
   I18n.translations[currentLocale].js.underline_button_title = settings.underline_button;
   I18n.translations[currentLocale].js.align_center_button_title = settings.align_center_button;
   I18n.translations[currentLocale].js.align_right_button_title = settings.align_right_button;
@@ -46,16 +45,6 @@ export default apiInitializer("0.11.1", (api) => {
   // Toolbar Button Definitions
   api.onToolbarCreate((toolbar) => {
     const buttons = [
-      {
-        id: "composer_highlight_button",
-        group: "extras",
-        icon: "highlighter",
-        shortcut: "H",
-        preventFocus: true,
-        trimLeading: true,
-        title: "highlight_button_title",
-        perform: (e) => e.applySurround("<mark>", "</mark>", getRawText(settings.highlighter_text)),
-      },
       {
         id: "underline_button",
         group: "fontStyles",
