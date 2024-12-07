@@ -11,7 +11,7 @@ highlighter_button:
   description:
     en: Enter the text for the title of the button in the composer.
 highlighter_text:
-  default: "Text123"
+  default: "Texta"
   type: string
   client: true
   description:
