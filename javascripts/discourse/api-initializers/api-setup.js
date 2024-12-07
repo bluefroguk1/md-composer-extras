@@ -30,7 +30,7 @@ export default apiInitializer("0.11.1", (api) => {
   I18n.translations[currentLocale].js.align_left_button_title = settings.align_left_button;
   I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
   I18n.translations[currentLocale].js.highlight_button_title = settings.highlighter_button;
-  I18n.translations[currentLocale].js.composer.this = "this";
+  I18n.translations[currentLocale].composer.this = "this";
 
   // Toolbar Button Definitions
   api.onToolbarCreate((toolbar) => {
