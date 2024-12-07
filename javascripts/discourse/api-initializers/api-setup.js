@@ -30,7 +30,6 @@ export default apiInitializer("0.11.1", (api) => {
   I18n.translations[currentLocale].js.align_left_button_title = settings.align_left_button;
   I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
   I18n.translations[currentLocale].js.highlight_button_title = settings.highlighter_button;
-  I18n.translations[currentLocale].js.composer.this = "this";
 
   // Modify the highlighter action
   api.modifyClass("controller:composer", {
@@ -51,56 +50,56 @@ export default apiInitializer("0.11.1", (api) => {
         icon: "underline",
         shortcut: "U",
         title: "underline_button_title",
-        perform: (e) => e.applySurround("[u]", "[/u]", "Text"),
+        perform: (e) => e.applySurround("[u]", "[/u]"),
       },
       {
         id: "strikethrough_button",
         group: "fontStyles",
         icon: "strikethrough",
         title: "strikethrough_button_title",
-        perform: (e) => e.applySurround("<s>", "</s>", "Text"),
+        perform: (e) => e.applySurround("<s>", "</s>"),
       },
       {
         id: "superscript_button",
         group: "fontStyles",
         icon: "superscript",
         title: "superscript_button_title",
-        perform: (e) => e.applySurround("<sup>", "</sup>", "Text"),
+        perform: (e) => e.applySurround("<sup>", "</sup>"),
       },
       {
         id: "subscript_button",
         group: "fontStyles",
         icon: "subscript",
         title: "subscript_button_title",
-        perform: (e) => e.applySurround("<sub>", "</sub>", "Text"),
+        perform: (e) => e.applySurround("<sub>", "</sub>"),
       },
       {
         id: "align_left_button",
         group: "extras",
         icon: "align-left",
         title: "align_left_button_title",
-        perform: (e) => e.applySurround('[wrap="floatl"]\n', "\n[/wrap]", "Text"),
+        perform: (e) => e.applySurround('[wrap="floatl"]\n', "\n[/wrap]"),
       },
       {
         id: "align_center_button",
         group: "extras",
         icon: "align-center",
         title: "align_center_button_title",
-        perform: (e) => e.applySurround('[wrap="center"]\n', "\n[/wrap]", "Text"),
+        perform: (e) => e.applySurround('[wrap="center"]\n', "\n[/wrap]"),
       },
       {
         id: "align_right_button",
         group: "extras",
         icon: "align-right",
         title: "align_right_button_title",
-        perform: (e) => e.applySurround('[wrap="right"]\n', "\n[/wrap]", "Text"),
+        perform: (e) => e.applySurround('[wrap="right"]\n', "\n[/wrap]"),
       },
       {
         id: "align_justify_button",
         group: "extras",
         icon: "align-justify",
         title: "align_justify_button_title",
-        perform: (e) => e.applySurround('[wrap="justify"]\n', "\n[/wrap]", "Text"),
+        perform: (e) => e.applySurround('[wrap="justify"]\n', "\n[/wrap]"),
       },
     ];
 
@@ -109,7 +108,7 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      perform: (e) => e.applySurround("<mark>", "</mark>", "this");
+      perform: (e) => e.applySurround("<mark>", "</mark>");
     },
     icon: "highlighter",
     label: "highlight_button_title",
@@ -119,14 +118,14 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) =>
-      toolbarEvent.applySurround('[wrap="columns"]\n', "\n[/wrap]", "Use the closing tag to mark where the first column ends. The second column will autobreak."),
+      toolbarEvent.applySurround('[wrap="columns"]\n', "\n[/wrap]"),
     icon: "table-columns",
     label: "columns_button_title",
   });
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      toolbarEvent.applySurround('[wrap="floatl"]\n', '\n[/wrap]', "Text");
+      toolbarEvent.applySurround('[wrap="floatl"]\n', '\n[/wrap]');
     },
     icon: 'indent',
     label: 'float_left_button',
