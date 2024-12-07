@@ -99,7 +99,7 @@ export default apiInitializer("0.11.1", (api) => {
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
       const text = "Text";
-      toolbarEvent.applySurround('<mark>', '</mark>', text);
+      toolbarEvent.applySurround('<mark>', '</mark>', "Textt");
     },
     icon: "highlighter",
     label: "highlight_button_title",
