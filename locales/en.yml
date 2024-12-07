@@ -1,6 +1,4 @@
 en:
-  composer:
-    highlight_button_title: Highlight Text
   js:
     highlight_button_title: "Highlight Text"
     underline_button_title: "Underline"
