@@ -98,7 +98,7 @@ export default apiInitializer("0.11.1", (api) => {
 
   api.addComposerToolbarPopupMenuOption({
     action: (toolbarEvent) => {
-      const text = (settings.highlighter_text || "Text").toString();
+      const text = (settings.highlighter_text || "Text");
       toolbarEvent.applySurround('<mark>', '</mark>', text, { noTranslate: true });
     },
     icon: "highlighter",
