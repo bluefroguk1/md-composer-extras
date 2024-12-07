@@ -37,7 +37,7 @@ export default apiInitializer("0.11.1", (api) => {
     pluginId: "highlight",
     actions: {
       highlightButton() {
-        this.get("toolbarEvent").applySurround("<mark>", "</mark>", this);
+        this.get("toolbarEvent").applySurround("<mark>", "</mark>");
       },
     },
   });
