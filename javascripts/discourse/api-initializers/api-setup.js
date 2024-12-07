@@ -30,7 +30,7 @@ export default apiInitializer("0.11.1", (api) => {
   I18n.translations[currentLocale].js.align_left_button_title = settings.align_left_button;
   I18n.translations[currentLocale].js.float_left_button = settings.float_left_button;
   I18n.translations[currentLocale].js.highlight_button_title = "Highlight Text";
-  I18n.translations[currentLocale].js.composer.this = "settings.highlighter_text";
+  I18n.translations[currentLocale].js.composer.this = "This";
 
   // Modify the highlighter action
   api.modifyClass("controller:composer", {
