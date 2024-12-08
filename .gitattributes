@@ -1,2 +1,14 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Ensure all JavaScript files use LF line endings
+*.js text eol=lf
+
+# Ensure all SCSS files use LF line endings
+*.scss text eol=lf
+
+# Ensure all Markdown files use LF line endings
+*.md text eol=lf
+
+# Ensure YAML files use LF line endings
+*.yml text eol=lf

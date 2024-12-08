@@ -1,14 +1,12 @@
 import { apiInitializer } from "discourse/lib/api";
-import loadScript from "discourse/lib/load-script";
 import I18n from "I18n";
+import { iconNode } from "discourse-common/lib/icon-library";
 
 export default apiInitializer("0.11.1", (api) => {
-  const { iconNode } = require("discourse-common/lib/icon-library");
   const currentLocale = I18n.currentLocale();
 
-  // Localization setup - keep only the button titles in translations
   I18n.translations[currentLocale].js.underline_button_title = settings.underline_button;
-  // Toolbar Button Definitions
+
   api.onToolbarCreate((toolbar) => {
     const buttons = [
       {
@@ -24,7 +22,6 @@ export default apiInitializer("0.11.1", (api) => {
     buttons.forEach((button) => toolbar.addButton(button));
   });
 
-  // Decorate cooked elements with highlight processing
   api.decorateCookedElement(
     async (elem, helper) => {
       const id = helper ? `post_${helper.getModel().id}` : "composer";

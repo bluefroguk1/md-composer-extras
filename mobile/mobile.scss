@@ -5,3 +5,21 @@
 .d-editor-spacer {
     margin: 0 2px;
 }
+
+/* Removed redundant CSS rules */
+#reply-control .d-editor-button-bar .bullet {
+    display: none;
+}
+
+#reply-control .d-editor-button-bar .list {
+    display: none;
+}
+
+#reply-control .d-editor-button-bar .align_justify_button {
+    display: none;
+}
+
+/* Optimized CSS for better performance */
+.d-editor-spacer {
+    margin: 0 2px;
+}
