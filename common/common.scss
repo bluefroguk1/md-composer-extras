@@ -1,4 +1,7 @@
-[data-wrap="center"] {
+[data-wrap="center"],
+[data-wrap="right"],
+[data-wrap="left"],
+[data-wrap="justify"] {
   text-align: center;
 }
 
@@ -13,5 +16,3 @@
 [data-wrap="justify"] {
   text-align: justify;
 }
-
-
