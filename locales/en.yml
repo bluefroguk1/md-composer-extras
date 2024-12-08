@@ -1,3 +1,4 @@
 en:
   js:
     underline_button_title: "Underline"
+    underline_text: settings.underline_text

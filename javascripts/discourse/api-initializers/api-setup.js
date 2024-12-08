@@ -13,6 +13,7 @@ export default apiInitializer("0.11.1", (api) => {
 
   // Localization setup - keep only the button titles in translations
   I18n.translations[currentLocale].js.underline_button_title = settings.underline_button;
+  I18n.translations[currentLocale].js.underline_text = settings.underline_text;
   // Toolbar Button Definitions
   api.onToolbarCreate((toolbar) => {
     const buttons = [
@@ -22,7 +23,7 @@ export default apiInitializer("0.11.1", (api) => {
         icon: "underline",
         shortcut: "U",
         title: "underline_button_title",
-        perform: (e) => e.applySurround("[u]", "[/u]"),
+        perform: (e) => e.applySurround("[u]", "[/u]", "underline_text"),
       },
     ];
 
