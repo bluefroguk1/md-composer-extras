@@ -4,7 +4,7 @@ import I18n from "I18n";
 
 // Helper function to get raw text without translation
 function getRawText(text) {
-  return text.replace(/\[.*?\]/g, '');
+  return text;
 }
 
 export default apiInitializer("0.11.1", (api) => {
@@ -22,7 +22,7 @@ export default apiInitializer("0.11.1", (api) => {
         icon: "underline",
         shortcut: "U",
         title: "underline_button_title",
-        perform: (e) => e.applySurround("[u]", "[/u]", "Example Text"),
+        perform: (e) => e.applySurround("[u]", "[/u]", settings.underline_text),
       },
     ];
 
