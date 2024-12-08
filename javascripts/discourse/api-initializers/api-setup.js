@@ -2,11 +2,6 @@ import { apiInitializer } from "discourse/lib/api";
 import loadScript from "discourse/lib/load-script";
 import I18n from "I18n";
 
-// Helper function to get raw text without translation
-function getRawText(text) {
-  return text;
-}
-
 export default apiInitializer("0.11.1", (api) => {
   const { iconNode } = require("discourse-common/lib/icon-library");
   const currentLocale = I18n.currentLocale();
